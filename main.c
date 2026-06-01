@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
         if(program[i] == '['){
             stack[stack_pointer++] = i; //in python terms im basically appending here
         }else if (program[i] == ']'){
-            int new_point = stack[--stack_pointer] = i; //and ther eright here im popping
+            int new_point = stack[--stack_pointer]; //and ther eright here im popping
             bracket_map[new_point] = i;
             bracket_map[i] = new_point;
         }
@@ -54,5 +54,5 @@ int main(int argc, char *argv[]) {
     }
 
     return 0;
-    
+
 }
