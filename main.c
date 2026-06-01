@@ -23,26 +23,25 @@ int main(int argc, char *argv[]) {
     program[size] = '\0';
     fclose(f);
     
-    int cnt = 0;
-    
-    bracket_map = malloc(TAPE_SIZE * sizeof(int));
+    bracket_map = malloc(size * sizeof(int));
 
+
+    int cnt = 0;
     while(program[cnt]){
         switch(program[cnt]){
-            case '>': break; //moves cursor right
-            case '<': break; //moves cursor left
-            case '+': break; //increments cell value
-            case '-': break; //decrements cell value
-            case '.': break; //outputs cell value
-            case ',': break; //inputs value into cell
+            case '>': tape_pointer++;                 break; //moves cursor right
+            case '<': tape_pointer--;                 break; //moves cursor left
+            case '+': tape[tape_pointer]++;           break; //increments cell value
+            case '-': tape[tape_pointer]--;           break; //decrements cell value
+            case '.': putchar(tape[tape_pointer]);    break; //outputs cell value
+            case ',': tape[tape_pointer] = getchar(); break; //inputs value into cell
             case '[': break; //start loop
             case ']': break; //end loop
+
+            //yes i felt fancy and evened out the break for aesthetic affects
         }  
         cnt++;
     }
-
-
-
 
     return 0;
 }
