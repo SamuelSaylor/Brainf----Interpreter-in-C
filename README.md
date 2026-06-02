@@ -21,3 +21,9 @@ This is actually my first project written in C, and technically the first time I
 Below is an example of printing "Hello world!" in the language:
 
 ```++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<<<-]<-]>>.>>+.+++++++..+++.<<++.>------------.<<.+++.------.--------.>+.>.```
+
+To run ensure you have a C compiler. (Duh)
+
+```gcc main.c -o main```
+
+```./main this_is_a_hello_world.bf``` (Or use whatever .bf file you have.)
